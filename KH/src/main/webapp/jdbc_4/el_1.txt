@@ -1,0 +1,17 @@
+EL의 내장 객체
+
+내장 객체						의미
+
+pageScope				Page 영역에 존재하는 객체를 참조할때 사용
+requestScope			Request 영역에 존재하는 객체를 참조할때 사용
+sessionScope			Session 영역에 존재하는 객체를 참조할때 사용
+applicationScope		Application 영역에 존재하는 객체를 참조할 때 사용
+param					파라미터 값을 배열로 얻어 올때 사용
+header					Header 정보를 얻어 올때 사용
+headeValues				Header 정보를 배열로 얻어 올때 사용
+cookie					쿠기 객체를 참조할때 사용
+initParam				컨택스트의 초기화 객체 사용
+pageContex
+
+
+
