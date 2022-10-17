@@ -72,20 +72,45 @@
 				//홀짝으로 다르게 색상 지정
 
 				String color = "papayawhip";
+				String backcolor = "";
 
-				if (++row % 4 == 0)
+				if (row % 2 == 0)
 					color = "red";
+				
+				
+%>
 
-				else if (row % 4 == 1)
-					color = "green";
 
-				else if (row % 4 == 2)
-					color = "blue";
-			%>
-
-			<tr bgcolor=<%=color%>
-				onmouseover="this.style.backgroundColor='SkyBlue'"
+			
+				<tr bgcolor=<%=color%>
+				<%if(row % 3 == 2){
+					%>
+					onmouseover = "this.style.backgroundColor='SkyBlue'";								
+					<% 
+				}
+				%>
+							
+				<%if(row % 3 == 1){
+					%>
+					onmouseover = "this.style.backgroundColor='pink'";
+					<% 
+				}
+				%>
+								
+				<%if(row % 3 == 0){
+					%>
+					onmouseover = "this.style.backgroundColor='black'";
+					<% 
+				}
+				
+			}
+				%>
+				
+				
+							
 				onmouseout="this.style.backgroundColor='<%=color%>'"
+				
+
 				style="opacity: <%=0.5%>;">
 
 				<!-- 수정과 삭제를 위한 링크로 id를 전송 -->
@@ -112,9 +137,9 @@
 
 		</table>
 
-		<%
+	<%
 		}
-		%>
+	%>
 
 		<hr width="90%" size="5" color="darkgray">
 

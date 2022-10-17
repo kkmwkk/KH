@@ -22,51 +22,32 @@
 
 
 <body>
-
-
-
 	<%@ page import="univ.*"%>
-
 	<%
 	String name = "";
-
 	String email = "";
-	
 	String address = "";
-
 	String title = "";
-
 	String content = "";
-
 	String headline = "등록";
-
 	String id = request.getParameter("id");
 
 	if (id != null) {
-
 		//등록이 아닌 경우, 출력을 위해 선택한 게시의 각 필드 내용을 저장
-
 		int idnum = Integer.parseInt(id);
 
 		BoardDBCP brddb = new BoardDBCP();
-
 		BoardEntity brd = brddb.getBoard(idnum);
 
 		name = brd.getName();
-
 		email = brd.getEmail();
-
 		title = brd.getTitle();
-
 		content = brd.getContent();
-
+		address = brd.getAddress();
 		headline = "수정 삭제";
-
 	}
 	;
 	%>
-
-
 
 	<h2>
 		게시판
@@ -75,9 +56,6 @@
 	</h2>
 	<hr>
 
-
-
-	
 		<form name=boardform method=post action="processboard.jsp">
 
 			<!-- menu : 등록, 수정 또는 삭제 구분을 위한 매개변수로 이용 -->
@@ -183,12 +161,9 @@
 							</tr>
 
 						</table>
-
 					</td>
 				</tr>
-
 			</table>
-
 		</form>
 
 	

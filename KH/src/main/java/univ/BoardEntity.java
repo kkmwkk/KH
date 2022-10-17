@@ -64,4 +64,10 @@ public class BoardEntity {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	
+	
+	
+	
+	
+	
 }
