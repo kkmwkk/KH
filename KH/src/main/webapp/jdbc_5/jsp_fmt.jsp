@@ -20,13 +20,16 @@ setLocale : 다국어 페이지를 사용할때 언어를 지정하는 태그 en
 value : 어떤 언어를 사용할 지정하는 속성
 bundle : properties 확장자를 사용하는 지원 파일을 읽어 오는 역할을 한다.
 -->
-<fmt:bundle basename="text">
+<fmt:bundle basename="ko">
 	<fmt:message key="name"/><br>
 	<fmt:message key="say"/><br>
-	<fmt:message key="say2">
-		<fmt:param value="들국화"/>
+	<fmt:message key="say2"/><br>
+	<fmt:message key="say3"><br>
+
+		<fmt:param value="들국화22"/>
 		<fmt:param value="해바라기"/>
 		<fmt:param value="이승엽"/>
+		<fmt:param value="010-2278-2357"/>
 	</fmt:message>
 </fmt:bundle>
 
