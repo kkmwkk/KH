@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jquery Test</title>
+	<style type="text/css">
+		span {font-size: 30pt}
+		.redtext{color:#f00}
+		.italictext{font-style: italic;}
+	</style>
+	
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	
+	<script type="text/javascript">
+		$('span').addClass('italictext');
+	</script>
+	
+	<!-- 
+		Head에 기술한 jQuery가 적용되지 않은 이유는 브라우저내의 HTML 인터프리터에 의해서
+	 	DOM 트리가 생성되기 이전에 span 엘리먼트를 검색하려고 시도하였기 때문이다.
+	 	jQuery를 HEAD 태그에서 사용하려면 브라우저에 HTML 문서가 로드되어 
+	 	준비된 상태(ready)가 되었을때 적용되어야한다.★ 
+	 	
+	 	이를 위해 document 객체를 jQuery 메소드('$')로 둘러싼(wrapped) 후에 ready() 메소드를 호출하여야한다.
+	 	
+	 	jQuery는 HTML의 DOM 조작과 이벤트 제어, 애니메이션 그리고 Ajax까지 웹화면을 다루는 자바스크립트 라이브러리이다.
+	 	jQuery가 기본적으로 가진 철학은 "write less, do more"이며,
+	 	개발자의 언어로 번역하면 "적은 코드로 많은 일을 하자"이다.
+	 	
+	 	기능
+	 	- DOM과 관련된 처리를 쉽게 구현할 수 있다.
+	 	- 규칙성을 가지고 이벤트를 처리할 수 있다.
+	 	- 애니메이션 효과를 쉽게 만들 수 있다.
+	 	- AJAX 처리방식을 편리하게 사용할 수 있다.
+	-->
+</head>
+<body>
+	<span> korea simple </span>
+	<script type="text/javascript">
+		$('span').addClass('redtext');
+	</script>
+</body>
+</html>

@@ -71,5 +71,28 @@ select * from board_1
 
 
 
+create table student_1(
+	num number(5),
+	name VARCHAR2(20),
+	primary key(num))
+	
+	
+select * from student_1
+
+
+insert into student_1 values(1,'라일락');
+insert into student_1 values(2,'수선화');
+insert into student_1 values(3,'장미');
+insert into student_1 values(4,'들국화');
+insert into student_1 values(5,'코스모스');
+insert into student_1 values(6,'달맞이꽃');
+insert into student_1 values(7,'국화');
+insert into student_1 values(8,'해당화');
+insert into student_1 values(9,'백합');
+insert into student_1 values(10,'개나리');
+
+
+
+
 
 

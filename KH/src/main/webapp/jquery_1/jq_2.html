@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>준비된 핸들러 사용하기</title>
+	<style type="text/css">
+	   span{font-size: 30pt}
+	   .redtext {color: #f00}
+	   .italictext{font-style: italic;}
+	</style>
+	
+	<!-- <script type="text/javascript" src="../js/jquery.js"></script> --> <!-- 인터넷 연결 안 됐을 때 사용 가능한 방법 -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script><!-- 인터넷 연결 됐을 때 jquery다운 받지 않고 바로 실행 가능한 방법 -->
+	
+	<script type="text/javascript">
+	  $(document).ready(myFun);
+	  
+	  function myFun()
+	  {
+	     $('span').addClass('italictext');
+	  }
+	  
+	  $(document).ready(function(){
+	     $('span').addClass('redtext');
+	  });
+	  
+	  $(function(){
+	     $('span').addClass('redtext');
+	  });
+	
+	</script>
+</head>
+<body>
+<span> korea seoul simple </span>
+
+</body>
+</html>
