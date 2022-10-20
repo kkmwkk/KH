@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>n 번째 엘리멘트 이후 혹은 이전에 위치한 엘리먼트에 스타일 해제하기- ":gt(n), lt(n)"</title>
+<style type="text/css">
+	table{
+		table-layout: auto;
+		width: 75%;
+	}
+	.textstyle{
+		color: blue;
+		font-weight: bold;
+		background-color: #cccc66;
+	}
+
+</style>
+<script type="text/javascript" src = "../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('td').addClass('textstyle');
+		// 2보다 작은 곳
+		$('td:lt(2)').removeClass('textstyle');
+		// 4보다 큰 곳
+		$('td:gt(4)').removeClass('textstyle');
+	});
+	
+	/* removeClass(): jQuery 확장 객체 집합에 속한 모든 엘리먼트에 하나 이상의 클래스를 제거 */
+</script>
+</head>
+<body>
+<table>
+	<tr><td>zero</td></tr>
+	<tr><td>one</td></tr>
+	<tr><td>two</td></tr>
+	<tr><td>three</td></tr>
+	<tr><td>four</td></tr>
+	<tr><td>five</td></tr>
+</table>
+
+</body>
+</html>

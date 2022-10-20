@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>모든 엘리먼트에 스타일 적용하고 인접한 현제를 노드로 추가하기 - "prev + next"</title>
+<style type = "text/css">
+	.textstyle{
+		font-size: 20pt;
+		font-style: bold;
+		line-height: 20pt;
+		margin: 10px;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('*').addClass('textstyle')
+		// addClass(classname) : 해당 classname을 가진 클래스 속성을 추가
+		// 이벤트가 발생한 노드에 선언된 클래스를 적용시킨다.
+		$('em + a').css('background-color', 'yellow').each(function(){
+			$(this).appendTo('.result1');
+		});
+		
+		console.log("검색된 엘리멘트 갯수 : " + $('em + a').length);
+	
+	});
+	
+</script>
+</head>
+<body>
+<em>one</em>
+<a>test</a>
+<em>two</em>
+<em>three</em>
+<em>four</em>
+<em>five</em>
+<em>six</em>
+<a>수선화</a>
+<hr size = "5" color = "pink">
+<div>
+	<span>prev + next로 검색된 엘리멘트</span>
+	<span class = "result1"></span>
+</div>
+
+</body>
+</html>

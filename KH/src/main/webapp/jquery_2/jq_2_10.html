@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조건에 반대되는 엘리먼트 검색</title>
+<script type="text/javascript" src = "../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('input:not(:checked) + span').css('background-color', '#cccc66');
+	/* $('input:checked + span').css('background-color', "#cccc66");
+	
+	// :not() 셀렉터는 인자로 주어진 조건에 반대되는 엘리멘트를 추출한다.*/
+})
+</script>
+</head>
+<body>
+<div>
+<input type="checkbox" name="fruit"><span>사과</span>
+</div>
+
+<div>
+<input type="checkbox" name="fruit"><span>바나나</span>
+</div>
+
+<div>
+<input type="checkbox" name="fruit" checked = checked><span>복숭아</span>
+</div>
+
+<div>
+<input type="checkbox" name="fruit"><span>수박</span>
+</div>
+
+
+</body>
+</html>

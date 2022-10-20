@@ -13,20 +13,25 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script><!-- 인터넷 연결 됐을 때 jquery다운 받지 않고 바로 실행 가능한 방법 -->
 	
 	<script type="text/javascript">
-	  $(document).ready(myFun);
-	  
-	  function myFun()
-	  {
+	
+ /* 	  $(document).ready(myFun);   
+	  function myFun(){
 	     $('span').addClass('italictext');
 	  }
 	  
-	  $(document).ready(function(){
+	  
+ 	  $(document).ready(function(){
 	     $('span').addClass('redtext');
 	  });
 	  
+	   */
+	   
+	   
+	  // jquery 3.0 부터는 이렇게 쓰는게 제일 좋음
 	  $(function(){
 	     $('span').addClass('redtext');
-	  });
+	     $('span').addClass('italictext');
+	  }); 
 	
 	</script>
 </head>

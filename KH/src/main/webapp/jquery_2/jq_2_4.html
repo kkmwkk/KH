@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조건에 만족하는 첫번째와 마지막 엘리먼트에 스타일 적용하기 - "first, :last</title>
+<style type = "text/css">
+	table{
+		table-layout : auto;
+		width: 80%;
+	}
+	
+	/* td{
+		color: blue;
+		font-weight: bold;
+	} */
+	
+	.selectedstyle{color: red; font-size: 20pt; background-color: pink;}
+</style>
+<script type = "text/javascript" src="../js/jquery.js"></script>
+<script type = "text/javascript">
+	$(function(){
+		$('tr:first').addClass('selectedstyle');
+		$('tr:last').addClass('selectedstyle');
+		
+		console.log("조건에 만족하는 첫번째 엘리멘트 : " + $('tr:first').text());
+		console.log("조건에 만족하는 마지막 엘리먼트 : " + $('tr:last').html());
+	});
+</script>
+</head>
+<body>
+<table>
+	<tr><td>one</td></tr>
+	<tr><td>two</td></tr>
+	<tr><td>three</td></tr>
+	<tr><td>four</td></tr>
+	<tr><td>five</td></tr>
+	<tr><td>six11</td></tr>
+	<tr><td>six22</td></tr>
+	<tr><td>six33</td></tr>
+</table>
+</body>
+</html>

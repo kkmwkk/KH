@@ -2,32 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>한번에 다양한 엘리먼트에 접근하여 개수와 텍스트 얻기
-- "selector1, selector2, selectorN"</title>
-			
-	<script type="text/javascript" src="../js/jquery.js"></script>		
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var resultText = "";
-			var $searchEles = $('p, span, div, .simpletext1');
+<title>한번에 다양한 엘리먼트에 접근하여 개수와 텍스트 얻기</title>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var resultText = "";
+		var $searchEles = $('p, span, div, .simpletext1');
+	
 		/*
-			var resultText : 일반 자바스크립트 변수. 흔히 사용하는 방식으로 스크립트만 사용가능
-			var $searchEles	: jQuery 변수, Jquery에서 사용하는 내장함수를 모두 사용할 수 있음
+			var resultText: 일반 자바스크립트 변수, 흔히 사용하는 방식으로 스크립트만 사용가능
+			var $searchEles: jQuery 변수, Jquery에서 사용하는 내장함수를 모두 사용할 수 있음
 		*/
-			resultText += "검색된 엘리먼트 개수 : " + $searchEles.length + "\n";
-			
-			$searchEles.each(function(){
-				resultText += $(this).text() + "\t";
-			});
-			
-			alert($.trim(resultText));
-		/*
-			$는 jQuery의 별칭으로 사용하는 기호이다. $기호를 사용하여 ()안에 매개변수로 셀렉터를 기술하여
-			jQuery 객체집합을 얻어낼 수 있다. jQuery에서 하는 대부분의 일이 바로 셀렉터로 엘리먼트를 추출하여
-			이벤트를 쉽게 바인딩하거나 효과를 함께 연결하는 일이다.
-		*/
+		
+		resultText += "검색된 엘리먼트 개수 : " + $searchEles.length + "\n";
+		
+		$searchEles.each(function(){
+			resultText += $(this).text() + "\t";
 		});
-	</script>				
+		
+		alert($.trim(resultText));
+	});
+</script>
 </head>
 <body>
 	<span class='simpletext1'>test korea1</span>
@@ -41,4 +37,25 @@
 	<p>2022 korea seoul</p>
 	<a>이 a태그는 alert 창에서 count 되지 않는다</a>
 </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>

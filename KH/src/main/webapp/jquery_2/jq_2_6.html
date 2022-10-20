@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>n번째로 일치하는 엘리먼트에 스타일 적용하기 - "eq(n)"</title>
+<style type="text/css">
+	table{
+		table-layout: auto;
+		width: 75%;
+	}
+
+</style>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('td:eq(2)').css('background-color', '#00ff00');
+	$('td:eq(4)').css('background-color', '#33dddd');
+	$('td:eq(5)').css('background-color', '#dd3333');
+});
+
+</script>
+</head>
+<body>
+<table>
+<tr><td>one</td></tr>
+<tr><td>two</td></tr>
+<tr><td>three</td></tr>
+<tr><td>four</td></tr>
+<tr><td>five</td></tr>
+<tr><td>six11</td></tr>
+<tr><td>six22</td></tr>
+</table>
+</body>
+</html>

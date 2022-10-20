@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택된 jQuery 확장 객체 집합에서 자손 엘리먼트에 스타일 시트 정의하기</title>
+<style type = "text/css">
+	em{
+		font-size: 12pt;
+		line-height: 40pt;
+	}
+	
+	#abc{
+		background-color: #ff0;
+	}
+</style>
+	<script type = "text/javascript" src = "../js/jquery.js"></script>
+	<script type = "text/javascript">
+		$(function(){
+			$('div em').css('border', '3pt solid #f00')
+					   .css('padding', '7pt 7pt 7pt 7pt');
+			$('span em').css('border', '1pt dotted #00f')
+						.css('padding', '12pt 12pt 12pt 12pt');
+			$('div b').css('border', '4pt solid #f00')
+					  .css('padding', '7pt 7pt 7pt 7pt');
+			
+			console.log("검색된 엘리먼트 갯수1 : " + $('div em').length);
+			console.log("검색된 엘리먼트 갯수2 : " + $('span em').length);
+			console.log("검색된 엘리먼트 갯수3 : " + $('div b').length);
+		});
+		
+		/* 
+		셀렉터					의미
+		
+		*						모든 엘리먼트와 일치
+		E						태그명이 E인 모든 엘리먼트와 일치
+		E F						E의 자손이면서 엘리먼트이름이 F인 모든 엘리먼트
+		E > F					E바로 아래 F 엘리먼트
+		E + F					E의 형제 엘리먼트로 바로 다음 형제 F 엘리먼트
+		E ~ F					E의 형제 엘리먼트로 다음에 나오는 모든 F 엘리먼트
+		E:has(F)				엘리먼트 F의 자손을 한개 이상 가지고 있는 모든 E 엘리먼트
+		E.C						클래스명 C를 가지고 이는 모든 E 엘리먼트
+		*.C						클래스명 C를 가지고 있는 모든 엘리먼트
+		E#i						아이디가 i인 모든 E엘리먼트
+		E[A]					어트리뷰트 A를 가지고 있는 모든 엘리먼트
+		E[A=V]					어트리뷰트 A의 값이 V인 모든 E 엘리먼트
+		E[A^=V]					어트리뷰트 A의 값이 V로 시작하는 모든 E 엘리먼트
+		E[A$=V]					값이 V로 끝나는 어트리뷰트 A를 가지고 있는 모든 E 엘리먼트
+		E[A*=V]					값이 V를 포함하는 어트리뷰트 A를 가지고 있는 모든 E 엘리먼트
+		
+		
+		*/
+	
+	
+	</script>
+
+</head>
+<body>
+<div>
+	<em>Hello!</em>
+	<em>청계천 조명</em>
+	<em>forever</em>
+</div>
+
+<span>
+	<em>good bye!!!</em>
+	<em id = "abc">javascript ~~~~~</em>
+</span>
+
+<div>
+	<b>집에!</b>
+	<b>보내!</b>
+	<b>주쇼!</b>
+</div>
+
+</body>
+</html>

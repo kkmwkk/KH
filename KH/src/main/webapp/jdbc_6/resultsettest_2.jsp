@@ -7,9 +7,9 @@
 	
 	try{
 		Context init = new InitialContext();
-		DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/OracleDB");
-		
+		DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/OracleDB");		
 		conn = ds.getConnection();
+		
 		
 		PreparedStatement pstmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 		
