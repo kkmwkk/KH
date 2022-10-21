@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>엘리먼트의 속성값 제거</title>
+<script type="text/javascript" src = "../js/jquery.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	$("button").click(function(){
+		/* 바로 앞 속성 삭제 prev()  next() 뒷 속성*/
+	$(this).prev().removeAttr("src"); 
+	$(this).prev().prev().removeAttr("src");
+	});
+});
+// next(): 엘리먼트의 형제 엘리먼트 가운데 바로 다음 엘리먼트를 반환
+// remove() : 대상이 되는 모든 엘리먼트 제거
+</script>
+</head>
+<body>
+<img alt="puppy11 picture" src="../images/button_1.jpg" title="똘이군~~~">
+<img alt="puppy22 picture2222" src="../images/button_2.jpg" title="똘이양~~~">
+<button>속성 값 제거</button>
+</body>
+</html>
