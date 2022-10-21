@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>엘리먼트의 속성 값을 콜백함수에서 얻어와서 설정</title>
+<script type="text/javascript" src = "../js/jquery.js"></script>
+<script type = "text/javascript">
+$(function(){
+	$("img").attr({
+		width: "100px",
+		height: "100px",
+	});
+	$("img").attr("src", function(){
+		return "../images/" + this.title;
+	});
+	
+	$("img").attr("title", function(index){
+		return index + " 번 엘리먼트 타이틀은 " + this.title + " 이다"
+	});
+});
+</script>
+</head>
+<body>
+<img title = "button_1.jpg"/>
+<img title = "button_2.jpg"/>
+<img title = "button_3.jpg"/>
+
+
+</body>
+</html>

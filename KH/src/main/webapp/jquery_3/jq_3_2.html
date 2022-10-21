@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>엘리먼트 집합들을 한 번에 처리하기</title>
+<style type = "text/css">
+img{padding: 20px;}
+div{color: blue; font-size: 30px;}
+</style>
+<script type="text/javascript" src = "../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("img").attr({
+		src : "../images/button_1.jpg",
+		title: "율이양~~~",
+		alt: "cat picture",
+		width: "130px",
+		height: "130px"
+	});
+	$("div#kbs").text($("img").attr("alt"));
+})
+
+
+</script>
+</head>
+<body>
+<img /><img /><img />
+<div id ="kbs"><b>어트리뷰트가 나옴</b></div>
+<div><b>어트리뷰트가 나옴</b></div>
+
+</body>
+</html>

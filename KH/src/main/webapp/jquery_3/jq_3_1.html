@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>엘리먼트의 어트리뷰트 값을 가져오고 설정하기</title>
+<style type = "text/css">
+	img{padding: 20px;}
+	div{color:blue; font-size: 30px;}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("img").attr("src", "../images/button_1.jpg")
+			.attr("title", "똘또리군~~")
+			.attr("alt", "전민우 picture")
+	$("div").text($("img").attr("alt"))
+});
+</script>
+</head>
+<body>
+<img /> <img />
+<div><B>어트리뷰트 테스트 ^^^^</B></div>
+
+</body>
+</html>
