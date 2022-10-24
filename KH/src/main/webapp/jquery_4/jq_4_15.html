@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 엘리먼트에 이벤트 적용</title>
+<style type = "text/css">
+ul{
+	float: left;
+	margin: 30px;
+}
+
+</style>
+<script type = "text/javascript" src="../js/jquery.js"></script>
+<script type = "text/javascript">
+$(function(){
+	$("a").bind("click", function(){
+		$("img").attr("src", $(this).attr("href"));
+		return false;
+	});
+});
+
+// bind() : 엘리먼트에 이벤트 핸들러를 지정한다 bind()를 통해 해당 엘리먼트에 원하는 이벤트를 적용할 수 있다.
+
+</script>
+</head>
+<body>
+	<ul>
+		<li><a href="../images/button_1.jpg">똘이 모습</a></li>
+		<li><a href="../images/button_2.jpg">울이 모습</a></li>
+	</ul>
+	<img />
+</body>
+</html>

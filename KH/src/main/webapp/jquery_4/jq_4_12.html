@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>해당 엘리먼트의 현재 위치 알아내기</title>
+<style type="text/css">
+div.abs {
+	width: 70px;
+	height: 150px;
+	position: absolute;
+	left: 250px;
+	top: 55px;
+	background-color: green;
+	cursor: pointer;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('div.abs').click(function(event){
+		// offset(): 대상 엘리먼트의 x좌표(left) y좌표(top)을 알려줌
+		
+		var offset = $(this).offset();
+		$("#result").text(this.tagName + " coords(" + offset.left + ", " + offset.top + ") " + "width : " + $(this).width() + " height : " + $(this).height());
+	});
+});
+
+
+</script>
+</head>
+<body>
+	<div id="result"></div>
+	<div class="abs"></div>
+</body>
+</html>

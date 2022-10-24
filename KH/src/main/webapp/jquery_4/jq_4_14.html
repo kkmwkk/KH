@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>margin을 포함한 너비와 높이 값 알아내기</title>
+<style type="text/css">
+div{ width: 80px; height: 60px;
+background-color: red; cursor: pointer;
+margin: 7px;
+}
+span{
+display: block
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	var div = $('div:first');
+	
+	$('#result1').text("outerWidth : " + div.outerWidth() + "ourterWidth(true) : " + div.outerWidth(true));
+	$('#result2').text("outerHeight : " + div.outerHeight() + "ourterHeight(true) : " + div.outerHeight(true));
+	
+});
+
+// outerWidth(true): 마진을 포함한 넓이를 구할 때 true를 준다.
+
+</script>
+</head>
+<body>
+<div></div>
+<span id = "result1"></span>
+<span id = "result2"></span>
+</body>
+</html>

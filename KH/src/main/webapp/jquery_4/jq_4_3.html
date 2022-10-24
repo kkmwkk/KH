@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>해당 엘리먼트의 모든 부모 엘리먼트 찾기</title>
+<script src = "../js/jquery.js" type = "text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		var result = new Array();
+		$("b").parents().each(function(i){
+			result[i] = this.tagName;
+		});
+		
+		$("b").append(result.join(", "));
+		/* $("b").append(result.reverse().join(", ")); */
+	});
+
+	// parents() : 엘리먼트의 조상 엘리먼트중 조건에 맞는 엘리먼트를 반환
+</script>
+</head>
+<body>
+<div>
+	<p>
+		<span><b>부모 엘리먼트 모두 검색 : </b></span>
+	</p>
+</div>
+
+</body>
+</html>

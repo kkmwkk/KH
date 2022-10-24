@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>해당 엘리먼트에 자식 엘리먼트로 추가하기</title>
+<style type = "text/css">
+div{float:left; margin: 25px;}
+</style>
+
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	var fruits=["apple", "banana", "orange", "melon"];
+	var cars=["sonata", "grandure", "genesis"];
+	var flowers=["장미", "백합", "개나리", "진달래"];
+	
+	
+	$.each(fruits, function(index, value){
+		$("#fruit_list").append($("<li>" + value + "</li>"));
+	});
+	
+	$.each(cars, function(index, value){
+		$("<li>" +value + "</li>" ).appendTo("#car_list");
+	});
+	
+	$.each(flowers, function(index, value){
+		$("#flower_list").append($("<li>" + value + "</li>"));
+	});
+});
+
+//append()와 appendTo()는 같은 동작을 수행한다.
+// 차이점은 대상 엘리먼트와 콘텐츠를 배치하는 순서에 있다.,
+// append()는 대상 엘리먼트의 함수를 호출하기 전에 기술한다.
+// 반면에 appendTo()는 대상 엘리먼트를 함수의 매개변수로 기술한다.
+// each() 함수는 dom의 기본 loop 개념을 간결하게 처리하고 최소한의 오류발생을 위해 만들어진 함수,
+
+</script>
+</head>
+
+<body>
+
+<div>
+	<b>내가 좋아하는 과일</b>
+	<ul id="fruit_list"></ul>
+</div>
+
+<div>
+	<b>갖고 싶은 차</b>
+	<ul id="car_list"></ul>
+</div>
+
+<div>
+	<b>좋아하는 꽃</b>
+	<ul id="flower_list"></ul>
+</div>
+
+
+</body>
+</html>
