@@ -2,9 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>DOM 엘리먼트 하나에 여러가지 이벤트 적용</title>
+<script type = "text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#korea1").bind({
+		mouseout : function(){
+			$("#korea1").attr("src", "../images/button_1.jpg");
+		},
+		
+		mouseover:function(){
+			$("#korea1").attr("src", "../images/button_2.jpg");
+		},
+		
+		click : function(){
+			alert("click ~~~~ \n 하하하핳하ㅏ");
+		}
+	});
+});
+</script>
 </head>
 <body>
+<img id = "korea1" alt="hi~~~~~" src="../images/button_1.jpg">
 
 </body>
 </html>
