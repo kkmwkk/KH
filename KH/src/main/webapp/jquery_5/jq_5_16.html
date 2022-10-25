@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 앱 형식을 자바스크립트 배열화하기</title>
+<style type = "text/css">
+div{color:red;}
+</style>
+<script type="text/javascript" src = "../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('button').click(function(){
+		var elems = $("div");
+		var arr = $.makeArray(elems);
+		arr.reverse();
+		$(arr).appendTo(document.body);
+	});
+});
+
+// $.makeArray() : 반복 구조를 갖는 배열 형태의 객체를 Array객체로 변형한다.
+// reverse() : 역순 재배치
+
+
+</script>
+</head>
+<body>
+<button>클릭</button>
+<div>First</div>
+<div>Second</div>
+<div>Third</div>
+<div>Fourth</div>
+<div>해바라기</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

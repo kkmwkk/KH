@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type = "text/css">
+*{font-size: 14px; font-weight:bold;}
+div{color:blue;}
+p{color:green; margin:0;}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	var months = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+	
+	var mons = $.map(months, function(value, indexOrKey){
+		return value.substr(0, 3);
+	});
+	
+	var rvmons = $.map(months, function(value, indexOrKey){
+		return value.substr(-3, 3);
+	});
+	
+	$("div").text(months.join(", "));
+	$("p").text(mons.join(", "));
+	$("#div1").text(rvmons.join(", "))
+})
+
+// $.map() : 값의 집합을 다른 집합으로 변환하는 연산을 한다.
+// $.map()의 첫번째 매개변수에 요일명을 저장한 months 배열을 전달
+// 두번째 매개변수인 익명 함수가 각 배열 요소를 반복하면서 호출된다.
+// value.substr(0, 3) : 배열의 각 요소 값에서 처음 3글자만 얻어내서 mons에 배열에 저장
+
+
+</script>
+</head>
+<body>
+<div></div>
+<p></p>
+<div id = div1></div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
