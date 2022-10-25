@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>해당 엘리먼트를 보이게 하기</title>
+<style>
+span{display:none}
+</style>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$("#kbs").click(function(){
+		$("#mbc").show();
+	});
+	
+	
+	//eq(index) : index는 0부터 시작.
+	$("button:eq(1)").click(function(){
+		$("span:eq(1)").show();
+	});
+	
+	$("button:eq(2)").click(function(){
+		$("span:eq(2)").show();
+	});
+	
+	$("button:eq(3)").click(function(){
+		$("span:eq(3)").show("slow",function(){
+			$(this).css('background','yellow');
+		});
+	});
+	
+	$("button:eq(4)").click(function(){
+		$("span:eq(4)").show("slow",function(){
+			$(this).css('background','#dd5577aa');
+		});
+	});
+	
+	$("button:eq(5)").click(function(){
+		$("span:eq(5)").show("slow",function(){
+			$(this).css('background','pink');
+		});
+	});
+
+});
+
+//show() : 엘리먼트를 나타나게 한다.
+//slow : slow 이외의 문자열은 400 밀리초 동안 애니메이션 진행 0 이상의 숫자를 줄수도 있다.
+
+
+
+
+
+</script>
+</head>
+<body>
+	<button id = "kbs">Show It</button>
+	<span id = "mbc">안녕하세요.</span><br>
+	<button>show it2</button>
+	<span>안녕하세요2</span><br>
+	<button>show it3</button>
+	<span>안녕하세요3</span><br>
+	<button>show it slow</button>
+	<span>반갑습니다</span><br>
+	<button>show it slow2</button>
+	<span>반갑습니다2</span><br>
+	<button>show it slow3</button>
+	<span>반갑습니다3</span><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
