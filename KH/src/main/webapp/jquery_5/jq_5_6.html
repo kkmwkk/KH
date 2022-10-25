@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sliding</title>
+<style>
+div{
+background: #3d9a44; margin: 3px; width: 80px; height: 40px; float: left;
+}
+
+.div2{
+background: yellow; margin: 3px; width: 80px; height: 40px; float: left;
+}
+p{clear : left;}
+</style>
+<script src="../js/jquery.js" type = "text/javascript"></script>
+<script type = "text/javascript">
+$(function(){
+	$('#slidUp').click(function(){
+		$("div").slideUp();
+	});
+	
+	$('#slidDown').click(function(){
+		$("div").slideDown("slow");
+	});
+	
+	$('#slidToggle').click(function(){
+		$("div").slideToggle("slow");
+	});
+	
+	
+	// slideUp() : 엘리먼트의 높이가 서서히 0에 가깝게 줄어가며 사라진다.
+	// slideToggle() : 해당 엘리먼트의 상태에 따라 위로 사라지게하거나 내려서 등장 시킨다.
+	
+})
+</script>
+</head>
+<body>
+<button id = "slidUp">slideUp</button>
+<button id = "slidDown">slideDown</button>
+<button id = "slidToggle">slideToggle</button>
+<br>
+<div></div><div></div><div></div><div></div>
+<p>
+<div></div><div></div><div></div><div></div>
+<p>
+<div class = "div2"></div><div class = "div2"></div><div class = "div2"></div><div class = "div2"></div>
+
+</body>
+</html>
