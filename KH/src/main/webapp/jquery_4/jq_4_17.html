@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 객체</title>
+<style type = "text/css">
+img{
+	width: 140px; height: 120px;
+}
+</style>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	var count = 0;
+	
+	$('img').bind('click', function(event){
+		var $target = $(this);
+		$target.width($target.width() + 100);
+		console.log($target.width());
+		$target.height($target.height() + 100);
+		count ++; 
+		console.log(count);
+		if(count >= 2){
+			$target.width($target.width()-100);
+			console.log($target.width());
+			$target.height($target.height()-100);
+			count=0;
+		};
+	});
+});
+
+
+</script>
+</head>
+<body>
+<img src = "../images/button_1.jpg">
+
+</body>
+</html>
