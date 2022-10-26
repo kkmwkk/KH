@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>서버의 데이터를 대상 엘리먼트에 삽입하기</title>
+<script type="text/javascript"  src = "../js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('button').click(function(){
+		$('#container').load('resource.html');
+	});
+});
+
+// load(): 완료된 응답에 일치하는 집합의 엘리먼트를 콘텐츠로 삽입한다.
+
+
+</script>
+</head>
+<body>
+<button>서버로부터 데이터를 가져오기</button>
+<div id = "container">데이터 가져오기 전</div>
+
+</body>
+</html>
