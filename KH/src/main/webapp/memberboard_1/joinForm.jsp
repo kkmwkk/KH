@@ -17,8 +17,8 @@ table{
 .td_title{
 	font-weight: bold;
 	font-size: x-large;
-
 }
+
 </style>
 </head>
 <body>
@@ -54,10 +54,26 @@ table{
 			</tr>
 			
 			<tr>
+				<td><label for="tel">전화번호</label></td>
+				<td><input type="text" name="tel" id="tel"></td>
+			</tr>
+			
+			<tr>
 				<td><label for="gender">성별</label></td>
 				<td>
 					<input type="radio" name="gender" id="gender1" value="남" checked="checked">남자
 					<input type="radio" name="gender" id="gender2" value="여">여자				
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="hobby">취미</label></td>
+				<td>
+					<input type="checkbox" name="hobby" id="hobby" value="코딩">코딩				
+					<input type="checkbox" name="hobby" id="hobby" value="걷기">걷기				
+					<input type="checkbox" name="hobby" id="hobby" value="수영">수영				
+					<input type="checkbox" name="hobby" id="hobby" value="독서">독서				
+					<input type="checkbox" name="hobby" id="hobby" value="펜싱">펜싱				
 				</td>
 			</tr>
 			
